@@ -1,26 +1,107 @@
-/**
- * 問大師 (Ask Master) 官方網站 — 前端動態與互動邏輯
- */
+/* ==========================================================================
+   問大師家族辦公室 (Wendashi Family Office) 官方網站 v3.0 — 前端互動邏輯
+   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Navbar Scroll Effect
+
+  // 1. 導覽列滾動陰影與樣式切換
   const navbar = document.getElementById('navbar');
+  const floatingCta = document.getElementById('floatingCta');
+  
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
+    if (window.scrollY > 50) {
+      navbar?.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      navbar?.classList.remove('scrolled');
     }
   });
 
-  // 2. Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const navLinks = document.getElementById('nav-links');
+  // 2. Scroll Reveal 捲動顯現動畫
+  const revealElements = document.querySelectorAll('.reveal');
 
-  if (mobileMenuBtn && navLinks) {
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    const elementVisible = 100;
+
+    revealElements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      if (elementTop < windowHeight - elementVisible) {
+        element.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // 初始化執行一次
+
+  // 3. FAQ 手風琴切換 (Accordion Toggle)
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const header = item.querySelector('.faq-header');
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // 關閉其他開啟的 FAQ 項目
+      faqItems.forEach((otherItem) => {
+        otherItem.classList.remove('active');
+      });
+
+      // 若原先未開啟，則展開點擊項
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // 4. 1對1 諮詢表單送出邏輯 (Form Submission & Modal)
+  const consultationForm = document.getElementById('consultationForm');
+  const successModal = document.getElementById('successModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+
+  if (consultationForm) {
+    consultationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+
+      if (!name || !phone || !service) {
+        alert('請填寫完整諮詢資訊，謝謝！');
+        return;
+      }
+
+      // 顯示成功跳窗
+      successModal.classList.add('active');
+
+      // 清空表單
+      consultationForm.reset();
+    });
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      successModal.classList.remove('active');
+    });
+  }
+
+  // 點擊彈窗外部區域關閉
+  if (successModal) {
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) {
+        successModal.classList.remove('active');
+      }
+    });
+  }
+
+  // 5. 行動端選單按鈕 (Mobile Menu Toggle)
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
-      const isExpanded = navLinks.style.display === 'flex';
-      if (isExpanded) {
+      if (navLinks.style.display === 'flex') {
         navLinks.style.display = 'none';
       } else {
         navLinks.style.display = 'flex';
@@ -29,92 +110,37 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.top = '100%';
         navLinks.style.left = '0';
         navLinks.style.width = '100%';
-        navLinks.style.backgroundColor = '#FAF8F5';
+        navLinks.style.background = '#FAF8F5';
         navLinks.style.padding = '1.5rem';
-        navLinks.style.boxShadow = '0 10px 25px rgba(61, 43, 31, 0.1)';
-        navLinks.style.borderBottom = '1px solid #EAE3D5';
+        navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
       }
     });
+  }
 
-    // Close menu when clicking nav links
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
+  // 6. 平滑捲動至指定區塊 (Smooth Anchor Scroll)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        
+        // 若行動選單為開啟狀態則關閉
+        if (window.innerWidth <= 768 && navLinks) {
           navLinks.style.display = 'none';
         }
-      });
-    });
-  }
 
-  // 3. Scroll Reveal Animation (IntersectionObserver)
-  const revealElements = document.querySelectorAll('.reveal');
-  
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  });
+        const navHeight = navbar ? navbar.offsetHeight : 0;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
-  revealElements.forEach(el => revealObserver.observe(el));
-
-  // 4. FAQ Accordion Toggle
-  const faqItems = document.querySelectorAll('.faq-item');
-  
-  faqItems.forEach(item => {
-    const header = item.querySelector('.faq-header');
-    header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      
-      // Close all other accordion items
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-      });
-
-      // Toggle current item
-      if (!isActive) {
-        item.classList.add('active');
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
       }
     });
   });
 
-  // 5. Form Submission & Modal Feedback
-  const consultForm = document.getElementById('consult-form');
-  const successModal = document.getElementById('success-modal');
-  const closeModalBtn = document.getElementById('close-modal-btn');
-  const modalMsg = document.getElementById('modal-msg');
-
-  if (consultForm) {
-    consultForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const userName = document.getElementById('user-name').value.trim();
-      const userTopic = document.getElementById('user-topic').value;
-      const userPhone = document.getElementById('user-phone').value.trim();
-
-      if (userName && userPhone) {
-        modalMsg.innerHTML = `尊敬的 <strong>${userName}</strong> 您好：<br>我們已收到您關於「<strong>${userTopic}</strong>」的諮詢申請，顧問專員將於 24 小時內親自與您聯繫！`;
-        
-        successModal.classList.add('active');
-        consultForm.reset();
-      }
-    });
-  }
-
-  if (closeModalBtn && successModal) {
-    closeModalBtn.addEventListener('click', () => {
-      successModal.classList.remove('active');
-    });
-
-    successModal.addEventListener('click', (e) => {
-      if (e.target === successModal) {
-        successModal.classList.remove('active');
-      }
-    });
-  }
 });

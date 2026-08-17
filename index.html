@@ -3,438 +3,557 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="問大師家族辦公室 Wendashi Family Office — 信託規劃 · 資產傳承 · 永續共榮。提供不動產信託、法拍屋教學指導、意定監護與安養信託、法律與稅務諮詢及 ESG 永續工程。">
-  <meta name="keywords" content="問大師家族辦公室, Wendashi Family Office, 不動產信託, 法拍屋教學, 意定監護, 安養信託, 稅務諮詢, ESG永續工程">
-  <title>問大師家族辦公室 ｜ 信託規劃 · 資產傳承 · 永續共榮</title>
+  <title>問大師家族辦公室 | 信託規劃 · 資產傳承 · 永續共榮</title>
+  <meta name="description" content="專為50+高資產個人、中小企業主與家族決策者打造之家族辦公室。提供不動產信託、法拍屋指導、意定監護安養信託、法律與稅務諮詢及ESG永續工程。">
   
-  <!-- Google Fonts (Noto Serif TC & Noto Sans TC) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
   
-  <!-- CSS Stylesheet -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header & Navigation -->
+  <!-- ==========================================================================
+       01. 頂部導覽與快捷轉換 (Navbar & Header)
+       ========================================================================== -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#hero" class="brand-logo">
-        <img src="assets/logo_badge.jpg" alt="問大師家族辦公室 Logo" id="nav-logo">
+      <a href="#" class="brand-logo">
+        <img src="assets/logo_badge.jpg" alt="問大師家族辦公室徽章">
         <div class="brand-text">
           <span class="brand-name">問大師家族辦公室</span>
           <span class="brand-sub">WENDASHI FAMILY OFFICE</span>
         </div>
       </a>
       
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#services" class="nav-link">專業服務</a></li>
-          <li><a href="#target-audience" class="nav-link">服務對象</a></li>
-          <li><a href="#advantages" class="nav-link">核心優勢</a></li>
-          <li><a href="#process" class="nav-link">服務流程</a></li>
-          <li><a href="#faq" class="nav-link">常見問題</a></li>
-        </ul>
-      </nav>
-      
+      <ul class="nav-links">
+        <li><a href="#founder" class="nav-link">大師觀點</a></li>
+        <li><a href="#motivation" class="nav-link">痛點解決</a></li>
+        <li><a href="#services" class="nav-link">5大服務</a></li>
+        <li><a href="#academy" class="nav-link">問大師學院</a></li>
+        <li><a href="#solutions" class="nav-link">服務對象</a></li>
+        <li><a href="#process" class="nav-link">把關流程</a></li>
+        <li><a href="#consultation" class="nav-link">FAQ 常見問題</a></li>
+      </ul>
+
       <div class="nav-actions">
-        <a href="#consultation" class="btn btn-primary" id="header-cta-btn">免費預約諮詢</a>
+        <a href="tel:0900000000" class="btn btn-tel">📞 一鍵撥號</a>
+        <a href="#consultation" class="btn btn-primary">預約 1對1 首談</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
       </div>
-      
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="切換選單">
-        ☰
-      </button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="section-tag">WENDASHI FAMILY OFFICE ‧ 家族辦公室</div>
-          <h1 class="hero-title">守護家族資產<br><span>傳承跨代智慧</span></h1>
-          <p class="hero-desc">
-            信託規劃 ‧ 資產傳承 ‧ 永續共榮。問大師家族辦公室整合不動產信託、法拍實務、安養監護、法稅顧問與 ESG 永續工程，打造一站式永續資產防護體系。
-          </p>
-          <div class="hero-actions">
-            <a href="#consultation" class="btn btn-primary" id="hero-consult-btn">預約 1對1 私密諮詢</a>
-            <a href="#services" class="btn btn-secondary" id="hero-learn-btn">瀏覽 5 大專業服務</a>
+  <!-- ==========================================================================
+       02. 主視覺區 (Hero Section: 前半場拼投報，後半場建制度)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-quote-badge">
+          「管資產，拼投報率只是前半場；建制度、控風險，才是決定勝負的下半場。」
+        </div>
+        <h1 class="hero-title">
+          為您的家族基業<br>
+          築起可長可久的<span>護城河</span>
+        </h1>
+        <p class="hero-desc">
+          打破單一商品推銷思維。問大師家族辦公室定位為「獨立第三方制度架構師與把關者」，整合跨法規、稅務、信託與不動產經驗，讓財富在制度下守護。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#consultation" class="btn btn-primary">預約 1對1 私密首談</a>
+          <a href="#services" class="btn btn-secondary">探索 5 大核心服務</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge-item">
+            <div class="badge-icon">🔒</div>
+            <span>100% 嚴格保密承諾</span>
           </div>
-          <div class="hero-badges">
-            <div class="badge-item">
-              <div class="badge-icon">✓</div>
-              <span>1對1 深度診斷</span>
-            </div>
-            <div class="badge-item">
-              <div class="badge-icon">✓</div>
-              <span>跨領域專家團隊</span>
-            </div>
-            <div class="badge-item">
-              <div class="badge-icon">✓</div>
-              <span>合法合規信託架構</span>
-            </div>
+          <div class="badge-item">
+            <div class="badge-icon">⚖️</div>
+            <span>跨法規與稅務整合把關</span>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">🏛️</div>
+            <span>獨立第三方制度架構</span>
+          </div>
+          <div class="badge-item">
+            <div class="badge-icon">📜</div>
+            <span>法院實務判決研析背書</span>
           </div>
         </div>
+      </div>
+
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-img-card">
+          <img src="assets/hero_banner.jpg" alt="問大師家族辦公室主視覺形象">
+        </div>
+        <div class="floating-card">
+          <div class="floating-icon">🛡️</div>
+          <div class="floating-text">
+            <h4>制度化家族治理</h4>
+            <p>資產安全 ‧ 傳承順暢 ‧ 家族同心</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       03. 大師觀點與 IP 權威牆 (Founder Insights & Authority Wall)
+       ========================================================================== -->
+  <section class="section-padding founder-section" id="founder">
+    <div class="container founder-grid">
+      <div class="founder-card reveal">
+        <img src="assets/logo_badge.jpg" alt="王執定 創辦人兼執行長" class="founder-avatar">
+        <h3 class="founder-name">王執定 執行長</h3>
+        <span class="founder-title-tag">問大師家族辦公室 創辦人</span>
+
+        <ul class="founder-credentials">
+          <li>人壽保險規劃顧問 ‧ 信託規劃顧問 雙證照</li>
+          <li>MDRT 百萬圓桌會正式會員 (Million Dollar Round Table)</li>
+          <li>ESG 永續長認證證書持有者</li>
+          <li>跨領域實體資產與企業轉型計畫主持人</li>
+        </ul>
+      </div>
+
+      <div class="founder-insights-content reveal">
+        <span class="section-tag">FOUNDER INSIGHTS</span>
+        <h3>「資產要走得長遠，靠的是制度，而不是個人的精力。」</h3>
         
-        <div class="hero-image-wrapper reveal">
-          <div class="hero-img-card">
-            <img src="assets/hero_banner.jpg" alt="問大師家族辦公室 資產傳承與信託規劃" id="hero-banner-img">
+        <div class="insight-quote-box">
+          「真正決定一個家族幾十年後命運的，從來不是獲利數字，而是防線夠不夠深——法律與稅務風險有沒有提前設防？資產在極端情況下是否安全？下一代接班能不能順利過渡？這就是家族辦公室制度的核心價值。」
+        </div>
+
+        <p style="color: var(--text-body); font-size: 1rem; line-height: 1.8;">
+          賺多少錢考驗的是眼光與運氣；但守不守得住、傳不傳得下去，考驗的是制度。我們不賣單一金融商品，而是為您的家族與企業建立一套標準運作流程，讓財富在制度下守護，把不確定性化為真正的家族基業。
+        </p>
+
+        <div class="media-matrix-list">
+          <div class="media-badge-item">🎙️ Podcast《問大師傳承必修課》</div>
+          <div class="media-badge-item">📺 判決實務影音專欄</div>
+          <div class="media-badge-item">📰 長青法稅專題報導</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       04. 為什麼家族資產需要「制度」？ (時代三大痛點)
+       ========================================================================== -->
+  <section class="section-padding" id="motivation">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">WHY INSTITUTION?</span>
+        <h2 class="section-title">為什麼您的資產需要建立「制度」？</h2>
+        <p class="section-subtitle">實務經驗中，讓財富在一夕之間縮水或引發危機的，往往不是市場波動，而是這三大忽視的風險：</p>
+      </div>
+
+      <div class="motivation-grid">
+        <div class="motivation-card reveal">
+          <div class="motivation-num">PAIN POINT 01</div>
+          <h3>遺產稅漏洞與傳承爭產危機</h3>
+          <p>缺乏事前制度規劃，當傳承發生時常面臨鉅額遺產稅現金籌措困難，甚至因繼承分配無共識導致家族手足對立、資產遭法院強制凍結。</p>
+        </div>
+
+        <div class="motivation-card reveal">
+          <div class="motivation-num">PAIN POINT 02</div>
+          <h3>中小企業股權分散與接班老化</h3>
+          <p>個人資產與企業資產未明確隔離，股權隨世代轉移而發散流失，加上廠房設備老化與法規合規風險，影響企業永續經營與價值。</p>
+        </div>
+
+        <div class="motivation-card reveal">
+          <div class="motivation-num">PAIN POINT 03</div>
+          <h3>退休老後自主與安養失控</h3>
+          <p>面對高齡失智或失能風險，若無預先指定意定監護人與安養信託專戶，老後資金易遭不當挪用或缺乏照護制度保障。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       05. 5 大標的化專業服務 (Professional Services)
+       ========================================================================== -->
+  <section class="section-padding" id="services" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">OUR SERVICES</span>
+        <h2 class="section-title">5 大標的化專業服務項目</h2>
+        <p class="section-subtitle">從法規、稅務、信託到實體資產升級，為您打造完整護城河：</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>不動產信託</h3>
+          <span class="service-en-title">Real Estate Trust</span>
+          <p>將不動產產權妥善隔離防護，避免個人債務波及。精準設定受益人與收益分配條款，實現不動產收益按意志長效傳承。</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>法拍屋教學與指導</h3>
+          <span class="service-en-title">Foreclosure Guidance</span>
+          <p>提供專業產權調查、法院點交分析、拍賣流程導引與實務風險控制，協助您安全掌握法拍投資與資產配置契機。</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>意定監護與安養信託</h3>
+          <span class="service-en-title">Guardianship & Care Trust</span>
+          <p>在頭腦清晰時指定信任的意定監護人，結合安養信託專戶，確保老後醫療與生活資金專款專用，尊嚴自主過晚年。</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">04</span>
+          <h3>法律與稅務諮詢</h3>
+          <span class="service-en-title">Legal & Tax Advisory</span>
+          <p>聯合專業律師與會計師團隊，提供遺贈稅規劃、房地合一稅避險、家族契約擬定與跨代資產防衛等專業諮詢。</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">05</span>
+          <h3>ESG 永續工程</h3>
+          <span class="service-en-title">ESG Sustainability Project</span>
+          <p>協助家族企業廠房進行老舊設備更新、綠能與健康空間改造、符合消防法規與廠登送審，達成實體資產永續升級。</p>
+        </div>
+
+        <div class="service-card reveal" style="background: var(--gold-light); border-color: var(--gold-border);">
+          <span class="service-num">★</span>
+          <h3>1 對 1 整合把關</h3>
+          <span class="service-en-title">Integrated Solutions</span>
+          <p>不販售單一商品，專注為您的家族提供跨領域整合診斷，訂製全方位資產保護與治理架構。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       06. 問大師學院 ‧ 長青法稅知識庫 (Wendashi Academy)
+       ========================================================================== -->
+  <section class="section-padding academy-section" id="academy">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">WENDASHI ACADEMY</span>
+        <h2 class="section-title">問大師學院 ‧ 長青法稅知識庫</h2>
+        <p class="section-subtitle">以真實法院裁判實務與權威法規為依據，為您解析財富保護與傳承盲點：</p>
+      </div>
+
+      <div class="academy-grid">
+        <div class="academy-card reveal">
+          <span class="academy-tag">保險與信託法規</span>
+          <h4>法院判決解密：保險金真的能 100% 免遺產稅嗎？</h4>
+          <p>解析實務上「實質課稅原則」課稅案例，探討如何運用信託架構打造真正安全的防火牆。</p>
+          <a href="#consultation" class="academy-link">閱讀專題 ➔</a>
+        </div>
+
+        <div class="academy-card reveal">
+          <span class="academy-tag">遺產與贈與稅</span>
+          <h4>跨代傳承合規籌劃：如何合法避開高額贈與稅陷阱？</h4>
+          <p>盤點分年贈與、附有負擔贈與及資產劃分技巧，確保資產安全移轉給下一代。</p>
+          <a href="#consultation" class="academy-link">閱讀專題 ➔</a>
+        </div>
+
+        <div class="academy-card reveal">
+          <span class="academy-tag">不動產繼承</span>
+          <h4>不動產共有解密：避免下一代手足因遺產房地撕破臉</h4>
+          <p>分析不動產分割訴訟與信託預先控管機制，讓不動產價值最大化而不致分散。</p>
+          <a href="#consultation" class="academy-link">閱讀專題 ➔</a>
+        </div>
+
+        <div class="academy-card reveal">
+          <span class="academy-tag">企業股權防禦</span>
+          <h4>家族企業接班：閉鎖性公司與股權信託的完美結合</h4>
+          <p>確保經營權不因繼承離散落入外人手中，為企業打造長治久安的股權治理制度。</p>
+          <a href="#consultation" class="academy-link">閱讀專題 ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       07. 三大客群專屬解決方案 (Target Audience Solutions)
+       ========================================================================== -->
+  <section class="section-padding" id="solutions">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">TARGET SOLUTIONS</span>
+        <h2 class="section-title">三大目標客群專屬解決方案</h2>
+        <p class="section-subtitle">針對不同的身分與需求，為您客製最適切的制度架構：</p>
+      </div>
+
+      <div class="ta-grid">
+        <div class="ta-card reveal">
+          <div class="ta-icon-badge">👑</div>
+          <h3>50+ 高資產個人</h3>
+          <p>專注於晚年生活尊嚴自主、安養資金專款專用與資產防詐護城河。</p>
+          <ul class="ta-points">
+            <li>意定監護契約簽署與公證</li>
+            <li>金錢安養信託與專戶管理</li>
+            <li>退休資產隔離與防詐防護</li>
+            <li>預立遺囑與特留分規劃</li>
+          </ul>
+        </div>
+
+        <div class="ta-card reveal">
+          <div class="ta-icon-badge">🏢</div>
+          <h3>中小企業主</h3>
+          <p>聚焦於個人與企業資產隔離、經營權傳承與廠房實體升級。</p>
+          <ul class="ta-points">
+            <li>企業股權結構防禦與信託</li>
+            <li>個人債務與公司資產防火牆</li>
+            <li>ESG 廠房設備與消防安全升級</li>
+            <li>二代接班與租稅優惠籌劃</li>
+          </ul>
+        </div>
+
+        <div class="ta-card reveal">
+          <div class="ta-icon-badge">🤝</div>
+          <h3>家族關鍵決策者</h3>
+          <p>致力於家族成員同心凝聚、跨代資產防衛與家族憲章建立。</p>
+          <ul class="ta-points">
+            <li>家族資產信託與共有土地整合</li>
+            <li>跨世代分配公平與協議擬定</li>
+            <li>長輩照顧費用專戶預先劃分</li>
+            <li>家族辦公室治理制度建置</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       08. 透明化 4 步驟服務把關流程 (Service Process)
+       ========================================================================== -->
+  <section class="section-padding" id="process" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">OUR PROCESS</span>
+        <h2 class="section-title">4 步驟服務把關流程</h2>
+        <p class="section-subtitle">嚴謹、透明、100% 保密，確保每一項制度方案精準落地：</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-card reveal">
+          <div class="step-num">STEP 01</div>
+          <h4>初訪需求診斷</h4>
+          <p>1對1 私密深入訪談，釐清家族資產現況、痛點與核心期望。</p>
+        </div>
+
+        <div class="process-card reveal">
+          <div class="step-num">STEP 02</div>
+          <h4>跨界方案設計</h4>
+          <p>聯合律師、會計師與信託專家，進行稅務試算與制度架構規劃。</p>
+        </div>
+
+        <div class="process-card reveal">
+          <div class="step-num">STEP 03</div>
+          <h4>專家協助落地</h4>
+          <p>協助完成契約擬定、公證、信託設立及實體資產升級執行。</p>
+        </div>
+
+        <div class="process-card reveal">
+          <div class="step-num">STEP 04</div>
+          <h4>永續動態維護</h4>
+          <p>因應法規變更與家族成員動態，提供定期檢視與彈性調整服務。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       09. 1對1 私密諮詢預約 & FAQ 常見問題 (Consultation & FAQ)
+       ========================================================================== -->
+  <section class="section-padding" id="consultation">
+    <div class="container consultation-faq-grid">
+      
+      <!-- 諮詢表單區 -->
+      <div class="form-wrapper reveal">
+        <h3>預約 1 對 1 專屬私密諮詢</h3>
+        <div class="privacy-badge">🔒 100% 嚴格保密 ‧ 絕不外流</div>
+        <p style="font-size: 0.925rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          請填寫以下資訊，我們的顧問團隊將於 24 小時內主動與您聯繫，安排專屬時間。
+        </p>
+
+        <form id="consultationForm">
+          <div class="form-group">
+            <label for="name">您的尊稱 *</label>
+            <input type="text" id="name" class="form-control" placeholder="例如：王先生 / 陳女士" required>
           </div>
-          <div class="floating-card">
-            <div class="floating-icon">🛡️</div>
-            <div class="floating-text">
-              <h4>問大師資產防護網</h4>
-              <p>信託規劃 ‧ 資產傳承 ‧ 永續共榮</p>
+
+          <div class="form-group">
+            <label for="phone">聯絡電話 *</label>
+            <input type="tel" id="phone" class="form-control" placeholder="例如：0912-345-678" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">主要關心議題 *</label>
+            <select id="service" class="form-control" required>
+              <option value="" disabled selected>請選擇您目前最想了解的項目</option>
+              <option value="不動產信託">不動產信託與產權隔離</option>
+              <option value="意定監護與安養信託">意定監護與安養信託</option>
+              <option value="法律與稅務諮詢">遺產稅與贈與稅合規規劃</option>
+              <option value="法拍屋教學">法拍屋指導與產權投資</option>
+              <option value="ESG永續工程">ESG 廠房升級與實體資產改造</option>
+              <option value="全方位家族辦公室">全方位家族資產制度建置</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="note">簡述您的需求或方便聯繫時段 (選填)</label>
+            <textarea id="note" class="form-control" rows="3" placeholder="例如：希望了解意定監護公證流程，平日下午方便接聽電話..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">送出私密諮詢預約</button>
+        </form>
+      </div>
+
+      <!-- FAQ 手風琴區 -->
+      <div class="faq-wrapper reveal">
+        <span class="section-tag">FAQ</span>
+        <h3>常見問題解答</h3>
+        <p>為您解答關於家族辦公室、信託與顧問服務的常見疑慮：</p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>問：成立信託後，我會失去對不動產或資產的控制權嗎？</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>答：不會。在信託契約中可以精準設定「監察人」與各項指令條件。信託目的是保護資產不被非法挪用或受債務波及，控制權仍依照您的意志在契約範圍內運作。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>問：意定監護跟傳統的法定監護有什麼不同？</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>答：傳統法定監護是由法院在您失能後指定監護人，可能非您本意；意定監護則是在您意識清晰時，自主指定信任的人（甚至指定兩人），並經公證人公證，最符合個人尊嚴。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>問：問大師家族辦公室與一般銀行理專或保險業務有何差別？</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>答：我們是「獨立第三方制度架構師」，不以銷售特定金融商品為目的。我們整合律師、會計師、地政士與實體工程團隊，專注於全方位的制度建置、風險控管與落地執行。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>问：ESG 永續工程如何與家族資產結合？</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-content">
+              <p>答：許多家族企業的關鍵資產在於廠房與實體空間。我們提供老舊設備更新、消防合規、節能與空氣治理，提升資產評鑑價值並符合最新法規要求，實現永續轉型。</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Professional Services Section (專業服務 5 大項目) -->
-    <section class="section-padding" id="services">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">PROFESSIONAL SERVICES ‧ 專業服務</div>
-          <h2 class="section-title">問大師家族辦公室 5 大核心服務</h2>
-          <p class="section-subtitle">從產權隔離、法拍投資、意定監護、法稅防禦到 ESG 廠房升級，全方位守護家族財富與事業</p>
-        </div>
+    </div>
+  </section>
 
-        <div class="services-grid">
-          <!-- Service 01 -->
-          <div class="service-card reveal">
-            <div class="service-num">01</div>
-            <h3>不動產信託</h3>
-            <div class="service-en-title">Real Estate Trust</div>
-            <p>
-              透過專業的信託架構規劃，將不動產產權予以隔離與保護。避免資產因非預期債務或糾紛遭到凍結，同時確保不動產之收益能依照委託人意志精準分配，為家族世代傳承奠定穩固基石。
-            </p>
-          </div>
-
-          <!-- Service 02 -->
-          <div class="service-card reveal">
-            <div class="service-num">02</div>
-            <h3>法拍屋教學與指導</h3>
-            <div class="service-en-title">Foreclosure Auction & Guidance</div>
-            <p>
-              深度解析法拍市場運行邏輯，提供從產權調查、點交分析、融資規劃到投標實務的全流程教學。協助學員避開法拍陷阱，精準評估標的價值，掌握低於市價取得優質不動產的獲利關鍵。
-            </p>
-          </div>
-
-          <!-- Service 03 -->
-          <div class="service-card reveal">
-            <div class="service-num">03</div>
-            <h3>意定監護與安養信託</h3>
-            <div class="service-en-title">Guardianship & Care Trust</div>
-            <p>
-              老後最怕的不是變老，而是有一天不能自己決定。趁現在頭腦清楚，先安排意定監護，指定信任的人照你的意思照顧你；再搭配安養信託，讓醫療費、照護費、生活費專款專用，不怕錢被亂用，也減少家人爭執。
-            </p>
-          </div>
-
-          <!-- Service 04 -->
-          <div class="service-card reveal">
-            <div class="service-num">04</div>
-            <h3>法律與稅務諮詢</h3>
-            <div class="service-en-title">Legal & Tax Advisory</div>
-            <p>
-              由專業律師與會計師聯手，提供個人與家族企業量身打造的稅務策略、防禦性法律規劃。從遺產贈與稅籌劃、房地合一稅避險，到資產法律風險控管，確保每一步皆合法且最具效益。
-            </p>
-          </div>
-
-          <!-- Service 05 -->
-          <div class="service-card reveal">
-            <div class="service-num">05</div>
-            <h3>ESG 永續工程</h3>
-            <div class="service-en-title">ESG Sustainability</div>
-            <p>
-              聚焦 ESG 趨勢、廠房老化與人才留任需求，整合專案管理、空間規劃、設備系統與健康建材，提供符合預算、工期精準、法規到位的一站式廠房改造方案。
-            </p>
-          </div>
-        </div>
+  <!-- ==========================================================================
+       10. 置底全局快捷轉換條 (Floating CTA Bar)
+       ========================================================================== -->
+  <div class="floating-cta-bar" id="floatingCta">
+    <div class="container floating-cta-container">
+      <div class="floating-cta-text">
+        <span>🛡️ 守護家族資產 ‧ 建立永續制度</span>
+        <span style="color: var(--gold-primary); font-size: 0.85rem;">｜ 初訪 1 對 1 嚴格保密諮詢</span>
       </div>
-    </section>
-
-    <!-- Target Audience (三大服務對象) -->
-    <section class="section-padding" id="target-audience" style="background: var(--bg-alt);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">SOLUTIONS ‧ 三大服務對象</div>
-          <h2 class="section-title">量身打造：三大目標客群專屬架構</h2>
-          <p class="section-subtitle">針對不同的身分與發展階段，提供精準且具可行性的傳承策略</p>
-        </div>
-        
-        <div class="ta-grid">
-          <!-- TA Card 1 -->
-          <div class="ta-card reveal" id="ta-card-1">
-            <div class="ta-icon-badge">👵👴</div>
-            <h3>50+ 高資產個人</h3>
-            <p>關心安享退休生活、退休金流規劃，以及跨代資產平穩傳承，預防繼承爭議。</p>
-            <ul class="ta-points">
-              <li>意定監護與安養信託專款專用</li>
-              <li>不動產信託與產權隔離保護</li>
-              <li>遺產稅與贈與稅合規節稅規劃</li>
-            </ul>
-          </div>
-
-          <!-- TA Card 2 -->
-          <div class="ta-card reveal" id="ta-card-2">
-            <div class="ta-icon-badge">🏢💼</div>
-            <h3>中小企業主</h3>
-            <p>關心企業股權順利傳承、經營權集中、個人與企業資產隔離以及 ESG 永續轉型。</p>
-            <ul class="ta-points">
-              <li>企業股權結構優化與資產隔離</li>
-              <li>ESG 永續工程與廠房升級改造</li>
-              <li>營利事業與個人綜合法稅諮詢</li>
-            </ul>
-          </div>
-
-          <!-- TA Card 3 -->
-          <div class="ta-card reveal" id="ta-card-3">
-            <div class="ta-icon-badge">🏠🤝</div>
-            <h3>家庭關鍵決策者</h3>
-            <p>為父母規劃安養保障，為家族建立資產防火牆與優質不動產配置。</p>
-            <ul class="ta-points">
-              <li>長輩醫療安養信託專戶獨立運作</li>
-              <li>法拍屋評估與優質不動產配置指導</li>
-              <li>家族防禦性法律與稅務整體規劃</li>
-            </ul>
-          </div>
-        </div>
+      <div class="floating-cta-actions">
+        <a href="tel:0900000000" class="btn btn-tel">📞 專線撥號</a>
+        <a href="#" class="line-btn-sm">💬 LINE@ 專人私訊</a>
+        <a href="#consultation" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.875rem;">預約首談</a>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Core Advantages (四大核心優勢) -->
-    <section class="section-padding" id="advantages">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">WHY WENDASHI ‧ 核心優勢</div>
-          <h2 class="section-title">為什麼選擇問大師家族辦公室？</h2>
-          <p class="section-subtitle">以客戶利益為第一考量，提供透明、客觀、高質感的家族顧問服務</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card reveal">
-            <div class="feature-number">01</div>
-            <h4>1對1 深度診斷</h4>
-            <p>全程嚴格保密，傾聽家族背景與真實需求，發掘潛在資產風險。</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-number">02</div>
-            <h4>客製化傳承架構</h4>
-            <p>打破套用模板，依據家庭成員現況設計最適信託與傳承藍圖。</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-number">03</div>
-            <h4>跨領域專家整合</h4>
-            <p>結合律師、會計師、地政士與專案管理師，提供一站式解答。</p>
-          </div>
-          <div class="feature-card reveal">
-            <div class="feature-number">04</div>
-            <h4>永續動態維護</h4>
-            <p>法規更新或家族結構變化時，及時提供架構調整建議。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Process (4步驟服務流程) -->
-    <section class="section-padding" id="process" style="background: var(--bg-alt);">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-tag">PROCESS ‧ 服務流程</div>
-          <h2 class="section-title">清晰透明的 4 步驟服務體驗</h2>
-          <p class="section-subtitle">每一步都有專人協助，讓複雜的法規與架構變得很簡單</p>
-        </div>
-
-        <div class="process-steps">
-          <div class="process-card reveal">
-            <div class="step-num">STEP 01</div>
-            <h4>初訪需求診斷</h4>
-            <p>預約 1 對 1 免費諮詢，梳理目前資產狀況、目標受眾與主要痛點。</p>
-          </div>
-          <div class="process-card reveal">
-            <div class="step-num">STEP 02</div>
-            <h4>方案與架構設計</h4>
-            <p>量身打造傳承藍圖，包含稅務試算、信託機制與風險防護評估。</p>
-          </div>
-          <div class="process-card reveal">
-            <div class="step-num">STEP 03</div>
-            <h4>專家執行與簽署</h4>
-            <p>協助對接信託機構或法律程序，確保條款精準符合期待。</p>
-          </div>
-          <div class="process-card reveal">
-            <div class="step-num">STEP 04</div>
-            <h4>定期盤點與關懷</h4>
-            <p>建立長期夥伴關係，隨人生階段動態微調傳承防護策略。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Consultation Form & FAQ Section -->
-    <section class="section-padding" id="consultation">
-      <div class="container consultation-faq-grid">
-        <!-- Reservation Form -->
-        <div class="form-wrapper reveal">
-          <div class="section-tag">RESERVATION</div>
-          <h3>免費預約專屬諮詢</h3>
-          <p>請填寫下方基本資訊，問大師家族辦公室資深顧問將於 24 小時內親自與您聯繫。</p>
-          
-          <form id="consult-form">
-            <div class="form-group">
-              <label for="user-name">您的姓名 *</label>
-              <input type="text" id="user-name" class="form-control" placeholder="例：張先生 / 王小姐" required>
-            </div>
-            <div class="form-group">
-              <label for="user-phone">聯絡電話 *</label>
-              <input type="tel" id="user-phone" class="form-control" placeholder="例：0912-345-678" required>
-            </div>
-            <div class="form-group">
-              <label for="user-topic">主要諮詢主題 *</label>
-              <select id="user-topic" class="form-control" required>
-                <option value="" disabled selected>請選擇您關心的主要議題</option>
-                <option value="01 不動產信託">01 不動產信託（產權隔離與收益精準分配）</option>
-                <option value="02 法拍屋教學與指導">02 法拍屋教學與指導（避開陷阱與獲利關鍵）</option>
-                <option value="03 意定監護與安養信託">03 意定監護與安養信託（老後自主與專款專用）</option>
-                <option value="04 法律與稅務諮詢">04 法律與稅務諮詢（遺贈稅籌劃與法規避險）</option>
-                <option value="05 ESG 永續工程">05 ESG 永續工程（一站式廠房升級改造）</option>
-                <option value="綜合諮詢與其他">綜合資產傳承與其他諮詢</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="user-time">方便聯絡時段</label>
-              <select id="user-time" class="form-control">
-                <option value="平日上午 (09:00 - 12:00)">平日上午 (09:00 - 12:00)</option>
-                <option value="平日下午 (14:00 - 18:00)">平日下午 (14:00 - 18:00)</option>
-                <option value="平日晚間 (18:30 - 20:30)">平日晚間 (18:30 - 20:30)</option>
-                <option value="週末或假日時間">週末或假日時間</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" id="submit-form-btn">
-              送出免費諮詢申請
-            </button>
-          </form>
-        </div>
-
-        <!-- FAQ Section -->
-        <div class="faq-wrapper reveal" id="faq">
-          <div class="section-tag">FREQUENTLY ASKED</div>
-          <h3>常見問題與解答</h3>
-          <p>解答高資產家庭與企業在規劃信託與傳承時最常面臨的疑問。</p>
-          
-          <div class="faq-list">
-            <div class="faq-item">
-              <div class="faq-header">
-                <h4>什麼是意定監護？為什麼需要搭配安養信託？</h4>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-content">
-                <p>意定監護讓您在意識清楚時指定信任的人為監護人；搭配安養信託則能確保未來醫療、照顧與生活費用專款專用，避免資產遭不當動用，保障尊嚴老後。</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-header">
-                <h4>辦理不動產信託後，我會失去資產主導權嗎？</h4>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-content">
-                <p>不會。透過專業信託契約與信託監察人設計，委託人仍然保有對產權分配規則的決定權，同時能防止債務風險波及不動產。</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-header">
-                <h4>法拍屋教學適合零經驗的初學者嗎？</h4>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-content">
-                <p>適合。問大師提供從產權調查、點交分析到融資投標的全流程實務指導，幫助您精準避坑並評估真實標的價值。</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-header">
-                <h4>ESG 永續工程包含哪些改造範疇？</h4>
-                <span class="faq-icon">+</span>
-              </div>
-              <div class="faq-content">
-                <p>涵蓋廠房老舊結構安全改善、空間規劃、節能設備系統導入與健康建材，符合政府 ESG 合規審查與人才留任需求。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
+  <!-- ==========================================================================
+       11. 頁尾 (Footer)
+       ========================================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#hero" class="brand-logo">
-            <img src="assets/logo_badge.jpg" alt="問大師家族辦公室 Logo" style="width: 36px; height: 36px;">
-            <span class="brand-name">問大師家族辦公室</span>
-          </a>
-          <p>
-            專為高資產個人、中小企業主與家族決策者提供之頂級資產傳承、安養信託、法稅諮詢與 ESG 永續顧問平台。
-          </p>
-          <div class="footer-tagline">信託規劃 · 資產傳承 · 永續共榮</div>
+          <div class="brand-logo">
+            <img src="assets/logo_badge.jpg" alt="問大師家族辦公室徽章" style="border-color: var(--gold-primary);">
+            <div class="brand-text">
+              <span class="brand-name">問大師家族辦公室</span>
+              <span class="brand-sub">WENDASHI FAMILY OFFICE</span>
+            </div>
+          </div>
+          <p>專為高資產個人、中小企業主與家族決策者打造之家族辦公室。以制度築起護城河，讓資產永續傳承。</p>
+          <span class="footer-tagline">信託規劃 · 資產傳承 · 永續共榮</span>
         </div>
 
         <div class="footer-col">
           <h4>專業服務</h4>
           <ul class="footer-links">
-            <li><a href="#services">01 不動產信託</a></li>
-            <li><a href="#services">02 法拍屋教學與指導</a></li>
-            <li><a href="#services">03 意定監護與安養信託</a></li>
-            <li><a href="#services">04 法律與稅務諮詢</a></li>
-            <li><a href="#services">05 ESG 永續工程</a></li>
+            <li><a href="#services">不動產信託</a></li>
+            <li><a href="#services">法拍屋教學與指導</a></li>
+            <li><a href="#services">意定監護與安養信託</a></li>
+            <li><a href="#services">法律與稅務諮詢</a></li>
+            <li><a href="#services">ESG 永續工程</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>快速連結</h4>
           <ul class="footer-links">
-            <li><a href="#hero">關於家族辦公室</a></li>
-            <li><a href="#target-audience">服務對象</a></li>
-            <li><a href="#advantages">核心優勢</a></li>
-            <li><a href="#process">服務流程</a></li>
-            <li><a href="#consultation">1對1 免費諮詢</a></li>
+            <li><a href="#founder">大師觀點</a></li>
+            <li><a href="#motivation">時代痛點</a></li>
+            <li><a href="#academy">問大師學院</a></li>
+            <li><a href="#solutions">服務對象</a></li>
+            <li><a href="#consultation">常見問題</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>聯絡與關注</h4>
-          <p style="font-size: 0.85rem; color: #B8A99B; margin-bottom: 0.75rem;">加入問大師官方 LINE，獲取最新法規與傳承資訊：</p>
-          <a href="#" class="line-btn" id="line-official-btn">
-            💬 加入 LINE 官方帳號
-          </a>
+          <h4>聯絡資訊</h4>
+          <ul class="footer-links" style="line-height: 1.8;">
+            <li>📞 預約專線：0900-000-000</li>
+            <li>💬 LINE@ 官方帳號：@wendashi</li>
+            <li>📍 服務據點：台北市信義區 / 專人預約到府</li>
+            <li>🔒 隱私安全：100% 簽署嚴格保密條款</li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 問大師家族辦公室 Wendashi Family Office. All Rights Reserved. | 信託規劃 · 資產傳承 · 永續共榮</p>
+        <p>&copy; 2026 問大師家族辦公室 Wendashi Family Office. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Success Modal -->
-  <div class="modal-overlay" id="success-modal">
+  <!-- ==========================================================================
+       12. 預約送出成功對話盒 Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="successModal">
     <div class="modal-card">
-      <div class="modal-icon">✨</div>
-      <h3 style="margin-bottom: 0.75rem; color: var(--text-primary);">諮詢申請已成功送出！</h3>
-      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;" id="modal-msg">
-        感謝您的預約。問大師家族辦公室資深顧問將在 24 小時內親自與您聯繫。
+      <div class="modal-icon">✓</div>
+      <h3 style="margin-bottom: 0.5rem;">諮詢預約已成功送出</h3>
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        感謝您的預約！問大師顧問團隊已收到您的需求，我們將恪守嚴格保密協定，於 24 小時內由專人與您聯繫。
       </p>
-      <button class="btn btn-primary" id="close-modal-btn" style="width: 100%;">確定</button>
+      <button class="btn btn-primary" id="closeModalBtn" style="width: 100%;">確 定</button>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- JavaScript Interaction -->
   <script src="app.js"></script>
 </body>
 </html>

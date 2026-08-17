@@ -1,14 +1,15 @@
 /* ==========================================================================
-   問大師 (Ask Master / Wendashi Family Office) 官方網站 — 品牌識別與主樣式系統
+   問大師家族辦公室 (Wendashi Family Office) 官方網站 v3.0 — 品牌識別與主樣式系統
    Design System & Theme Tokens (Light Luxury Palette)
    ========================================================================== */
 
 :root {
   /* Color Palette - Light Luxury Palette */
-  --bg-main: #FAF8F5;
-  --bg-alt: #F4EFE6;
-  --bg-card: #FFFFFF;
-  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-main: #FAF8F5;            /* 典雅暖米白主背景 */
+  --bg-alt: #F4EFE6;             /* 次要暖米金背景 */
+  --bg-card: #FFFFFF;            /* 卡片純白背景 */
+  --bg-dark: #34241A;            /* 深褐咖啡底色 */
+  --bg-glass: rgba(255, 255, 255, 0.88);
   
   --text-primary: #3D2B1F;       /* 深褐棕 - 主標題與關鍵文字 */
   --text-body: #5A4A3E;          /* 暖灰褐 - 內文 */
@@ -18,7 +19,7 @@
   --gold-hover: #AA8238;         /* 深調黃金 */
   --gold-light: #F7F2E6;         /* 淺暖金底色 */
   --gold-accent: #D4AF37;        /* 明亮奢華金 */
-  --gold-border: rgba(197, 160, 89, 0.3);
+  --gold-border: rgba(197, 160, 89, 0.35);
   
   --border-color: #EAE3D5;
   --border-light: #F0EAE1;
@@ -62,6 +63,7 @@ body {
   color: var(--text-body);
   line-height: 1.7;
   overflow-x: hidden;
+  padding-bottom: 70px; /* Space for Floating CTA Bar */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -98,7 +100,7 @@ a {
 
 .section-header {
   text-align: center;
-  max-width: 750px;
+  max-width: 780px;
   margin: 0 auto 3.5rem auto;
 }
 
@@ -170,6 +172,18 @@ a {
   box-shadow: var(--shadow-md);
 }
 
+.btn-tel {
+  background: #2E7D32;
+  color: #FFFFFF;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+.btn-tel:hover {
+  background: #1B5E20;
+  color: #FFFFFF;
+}
+
 /* Header & Navigation */
 .navbar {
   position: fixed;
@@ -177,7 +191,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(250, 248, 245, 0.9);
+  background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
   transition: all var(--transition-fast);
@@ -187,7 +201,7 @@ a {
 .navbar.scrolled {
   box-shadow: var(--shadow-md);
   padding: 0.75rem 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .nav-container {
@@ -217,14 +231,14 @@ a {
 
 .brand-name {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.1;
 }
 
 .brand-sub {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
   color: var(--gold-primary);
   font-weight: 600;
@@ -234,12 +248,12 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
   list-style: none;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   font-weight: 500;
   color: var(--text-body);
   position: relative;
@@ -265,6 +279,12 @@ a {
   width: 100%;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -274,10 +294,10 @@ a {
   cursor: pointer;
 }
 
-/* Hero Section */
+/* Hero Section (v3.0 創辦人金句與把關者定位) */
 .hero-section {
-  padding-top: 9rem;
-  padding-bottom: 5rem;
+  padding-top: 9.5rem;
+  padding-bottom: 5.5rem;
   background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-alt) 100%);
   position: relative;
   overflow: hidden;
@@ -285,17 +305,31 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 3.5rem;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 580px;
+  max-width: 620px;
+}
+
+.hero-quote-badge {
+  display: inline-block;
+  background: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.85rem;
   line-height: 1.25;
   margin-bottom: 1.25rem;
 }
@@ -308,22 +342,23 @@ a {
 }
 
 .hero-desc {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   color: var(--text-body);
   margin-bottom: 2rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero-badges {
-  display: flex;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   border-top: 1px solid var(--border-color);
   padding-top: 1.5rem;
 }
@@ -338,8 +373,8 @@ a {
 }
 
 .badge-icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--gold-light);
   color: var(--gold-primary);
@@ -348,6 +383,7 @@ a {
   justify-content: center;
   font-size: 0.8rem;
   border: 1px solid var(--gold-border);
+  flex-shrink: 0;
 }
 
 .hero-image-wrapper {
@@ -382,11 +418,11 @@ a {
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--gold-border);
   display: flex;
   align-items: center;
   gap: 1rem;
-  max-width: 280px;
+  max-width: 300px;
 }
 
 .floating-icon {
@@ -412,7 +448,168 @@ a {
   margin-bottom: 0;
 }
 
-/* Services Section (5 大專業服務) */
+/* Founder Insights & Authority Section (大師觀點與 IP 權威牆) */
+.founder-section {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.founder-card {
+  background: var(--bg-main);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.founder-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold-primary);
+  margin: 0 auto 1.25rem auto;
+  display: block;
+}
+
+.founder-name {
+  font-size: 1.65rem;
+  margin-bottom: 0.25rem;
+}
+
+.founder-title-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  background: var(--gold-light);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--gold-border);
+  margin-bottom: 1.25rem;
+}
+
+.founder-credentials {
+  list-style: none;
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+}
+
+.founder-credentials li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.founder-credentials li::before {
+  content: '◆';
+  color: var(--gold-primary);
+  font-size: 0.75rem;
+}
+
+.founder-insights-content h3 {
+  font-size: 2rem;
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.insight-quote-box {
+  background: var(--bg-alt);
+  border-left: 4px solid var(--gold-primary);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.media-matrix-list {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.media-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.media-badge-item:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  color: var(--gold-primary);
+}
+
+/* Motivation / 3 Pain Points Section (時代三大痛點) */
+.motivation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.motivation-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.motivation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-border);
+}
+
+.motivation-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.motivation-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.motivation-card p {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Services Section (5 大標的化專業服務) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -470,6 +667,65 @@ a {
   color: var(--text-body);
   line-height: 1.75;
   margin-bottom: 0;
+}
+
+/* Academy / Knowledge Vault Section (問大師學院 長青知識庫) */
+.academy-section {
+  background: var(--bg-alt);
+}
+
+.academy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.academy-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.academy-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.academy-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.academy-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.academy-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.academy-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 /* Target Audience Section */
@@ -544,53 +800,6 @@ a {
   font-weight: bold;
 }
 
-/* Features Section */
-.features-section {
-  background: var(--bg-alt);
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.feature-card {
-  background: var(--bg-card);
-  padding: 2rem 1.5rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-fast);
-}
-
-.feature-card:hover {
-  border-color: var(--gold-primary);
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.feature-number {
-  font-family: var(--font-serif);
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--gold-primary);
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
-}
-
-.feature-card h4 {
-  font-size: 1.15rem;
-  margin-bottom: 0.75rem;
-}
-
-.feature-card p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: 0;
-}
-
 /* Process Section */
 .process-steps {
   display: grid;
@@ -639,7 +848,7 @@ a {
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--gold-border);
 }
 
 .form-wrapper h3 {
@@ -647,10 +856,18 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.form-wrapper p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+.privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  color: var(--text-primary);
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
 }
 
 .form-group {
@@ -682,10 +899,6 @@ a {
   border-color: var(--gold-primary);
   background: #FFFFFF;
   box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
-}
-
-select.form-control {
-  cursor: pointer;
 }
 
 /* FAQ Accordion */
@@ -762,9 +975,60 @@ select.form-control {
   margin-bottom: 0;
 }
 
+/* Floating CTA Bar (全局置底快捷轉換條) */
+.floating-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(52, 36, 26, 0.96);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--gold-border);
+  padding: 0.85rem 0;
+  z-index: 999;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.floating-cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.floating-cta-text {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.floating-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.line-btn-sm {
+  background: #06C755;
+  color: #FFFFFF;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.line-btn-sm:hover {
+  background: #05B34C;
+}
+
 /* Footer */
 .footer {
-  background: #34241A;
+  background: #2D1E15;
   color: #EAE3D5;
   padding: 4rem 0 2rem 0;
 }
@@ -821,23 +1085,6 @@ select.form-control {
 
 .footer-links a:hover {
   color: var(--gold-primary);
-}
-
-.line-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #06C755;
-  color: #FFFFFF;
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-.line-btn:hover {
-  background: #05B34C;
 }
 
 .footer-bottom {
@@ -916,20 +1163,16 @@ select.form-control {
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 992px) {
-  .hero-grid, .consultation-faq-grid {
+  .hero-grid, .founder-grid, .consultation-faq-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .services-grid {
+  .motivation-grid, .services-grid, .ta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .ta-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .features-grid, .process-steps {
+  .academy-grid, .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -948,15 +1191,23 @@ select.form-control {
   }
 
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
-  .services-grid, .features-grid, .process-steps {
+  .motivation-grid, .services-grid, .academy-grid, .process-steps, .ta-grid {
     grid-template-columns: 1fr;
+  }
+
+  .floating-cta-text {
+    display: none;
+  }
+
+  .floating-cta-container {
+    justify-content: center;
   }
 
   .footer-grid {
